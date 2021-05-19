@@ -1,0 +1,21 @@
+{
+  "Address": "MultiAddress",
+  "LookupSource": "MultiAddress",
+  "DeviceProfile": {
+    "state": "u8",
+    "penalty": "u128",
+    "wcd": "u64"
+  },
+  "OrderBaseOf": {
+    "until": "Moment",
+    "data": "u64",
+    "fee": "Balance"
+  },
+  "OrderOf": {
+    "until": "Moment",
+    "data": "u64",
+    "fee": "Balance",
+    "client": "AccountId",
+    "paraid": "u32"
+  }
+}

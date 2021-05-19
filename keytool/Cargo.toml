@@ -1,0 +1,33 @@
+[package]
+name = "keytool"
+version = "0.1.0"
+authors = ["ddulesov <dmitry.dulesov@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.polkadot-parachain]
+default-features = false
+git = 'https://github.com/paritytech/polkadot.git'
+branch = 'rococo-v1'
+
+[dependencies.sp-core]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'rococo-v1'
+version = '3.0.0'
+
+[dependencies.sp-runtime]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'rococo-v1'
+version = '3.0.0'
+
+#codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false }
+
+[features]
+default = ['std']
+std = [
+    "sp-core/std",
+    "polkadot-parachain/std"
+]
